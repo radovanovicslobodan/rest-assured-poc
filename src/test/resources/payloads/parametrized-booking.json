@@ -1,0 +1,11 @@
+{
+  "firstname" : "%RANDOM_FIRSTNAME%",
+  "lastname" : "%RANDOM_LASTNAME%",
+  "totalprice" : 111,
+  "depositpaid" : true,
+  "bookingdates" : {
+    "checkin" : "%TODAY%",
+    "checkout" : "%WEEKAFTER%"
+  },
+  "additionalneeds" : "Breakfast"
+}
