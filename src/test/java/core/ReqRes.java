@@ -5,6 +5,7 @@ import io.restassured.response.Response;
 public class ReqRes {
 
     String request;
+    Response response;
 
     public String getRequest() {
         return request;
@@ -14,7 +15,6 @@ public class ReqRes {
         this.request = request;
     }
 
-    Response response;
     public Response getResponse() {
         return response;
     }

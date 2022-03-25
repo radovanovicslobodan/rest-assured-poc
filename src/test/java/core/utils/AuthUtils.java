@@ -1,8 +1,8 @@
-package utils;
+package core.utils;
 
 import io.restassured.response.Response;
 
-import static utils.RequestUtils.makePostRequest;
+import static core.utils.RequestUtils.makePostRequest;
 
 public class AuthUtils {
 

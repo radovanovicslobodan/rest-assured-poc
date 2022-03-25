@@ -1,4 +1,4 @@
-package utils;
+package core.utils;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -42,6 +42,7 @@ public class ResponseUtils {
         Map<String, Object> getResponseMap = gson
                 .fromJson(getResponse.body().asString(), new TypeToken<HashMap<String, Object>>() {
                 }.getType());
+
         return payloadToCompareMap.keySet().equals(getResponseMap.keySet());
     }
 }

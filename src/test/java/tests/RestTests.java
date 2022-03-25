@@ -7,8 +7,8 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static utils.RequestUtils.*;
-import static utils.ResponseUtils.*;
+import static core.utils.RequestUtils.*;
+import static core.utils.ResponseUtils.*;
 
 public class RestTests {
 

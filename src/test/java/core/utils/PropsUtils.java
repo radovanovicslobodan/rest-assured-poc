@@ -1,4 +1,4 @@
-package utils;
+package core.utils;
 
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;

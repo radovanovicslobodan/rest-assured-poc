@@ -1,4 +1,4 @@
-package utils;
+package core.utils;
 
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
@@ -58,11 +58,11 @@ public class ApiUtils {
         return builder.build();
     }
 
-    public static RequestSpecification createGetRequestSpec(String basePath,int id) {
+    public static RequestSpecification createGetRequestSpec(String basePath, int id) {
         RequestSpecBuilder builder = new RequestSpecBuilder();
 
         builder.setBaseUri("https://restful-booker.herokuapp.com");
-        builder.setBasePath(basePath+"/"+id);
+        builder.setBasePath(basePath + "/" + id);
         builder.setContentType(ContentType.JSON);
         return builder.build();
     }

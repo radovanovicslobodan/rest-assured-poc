@@ -1,7 +1,6 @@
-package utils;
+package core.utils;
 
 import core.ReqRes;
-import core.jsonparser.JsonParser;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
@@ -10,8 +9,8 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
 import static core.jsonparser.JsonParser.parseJson;
-import static utils.ApiUtils.*;
-import static utils.PropsUtils.getPayload;
+import static core.utils.ApiUtils.*;
+import static core.utils.PropsUtils.getPayload;
 
 public class RequestUtils {
 
