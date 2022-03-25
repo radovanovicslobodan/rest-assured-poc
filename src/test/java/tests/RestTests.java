@@ -1,15 +1,14 @@
 package tests;
 
+import core.ReqRes;
 import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
 import org.junit.jupiter.api.Test;
-import core.ReqRes;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static utils.RequestUtils.*;
-import static utils.ResponseUtils.checkResponse;
-import static utils.ResponseUtils.checkResponseValue;
+import static utils.ResponseUtils.*;
 
 public class RestTests {
 
@@ -34,18 +33,23 @@ public class RestTests {
     @Test
     public void verifyCreateBookingId() {
         ReqRes reqRes = makePostReqRes("booking", "booking");
-        assertTrue(checkResponseValue(reqRes.getResponse(),"bookingid"));
+        assertTrue(checkResponseValue(reqRes.getResponse(), "bookingid"));
     }
 
     @Test
     public void verifyUpdatingBooking() {
-        ReqRes reqRes = makePatchReqRes("booking","partial-booking","booking");
+        ReqRes reqRes = makePatchReqRes("booking", "partial-booking", "booking");
         assertTrue(checkResponse(reqRes));
     }
 
     @Test
     public void verifyCreateBookingWithRandomData() {
-        ReqRes reqRes = makePostReqRes("parametrized-booking", "booking", "booking",true);
+        ReqRes reqRes = makePostReqRes("parametrized-booking", "booking", "booking", true);
         assertTrue(checkResponse(reqRes));
+    }
+
+    @Test
+    public void verifyGetBooking() {
+        assertTrue(checkGetResponse("booking",1));
     }
 }

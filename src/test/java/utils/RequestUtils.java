@@ -75,4 +75,9 @@ public class RequestUtils {
         reqRes.setResponse(putResponse);
         return reqRes;
     }
+
+    public static Response makeGetRequest(String basePath, int id) {
+        RequestSpecification requestSpec = createGetRequestSpec(basePath, id);
+        return ApiUtils.sendRequest(requestSpec, Method.GET);
+    }
 }

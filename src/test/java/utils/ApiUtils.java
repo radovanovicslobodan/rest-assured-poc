@@ -58,6 +58,16 @@ public class ApiUtils {
         return builder.build();
     }
 
+    public static RequestSpecification createGetRequestSpec(String basePath,int id) {
+        RequestSpecBuilder builder = new RequestSpecBuilder();
+
+        builder.setBaseUri("https://restful-booker.herokuapp.com");
+        builder.setBasePath(basePath+"/"+id);
+        builder.setContentType(ContentType.JSON);
+        return builder.build();
+    }
+
+
     public static String wrapRequest(String innerKey, String request) {
         String newValue = String.format("{\"%s\":%s}", innerKey, request);
         return newValue;
